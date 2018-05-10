@@ -2,8 +2,8 @@
 
 <GridLayout class="page" rows="* auto">
     <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <Label [nsRouterLink]="['../team', item.id]" [text]="item.name"
+        <ng-template let-team="item">
+            <Label [nsRouterLink]="['../team', team.id]" [text]="team.name"
                 class="list-group-item"></Label>
         </ng-template>
     </ListView>
@@ -11,6 +11,6 @@
     <StackLayout row="1">
         <Button text="Open Team One" nsRouterLink="../team/1"></Button>
         <Button text="Open Team Two witn Animation" nsRouterLink="../team/2" pageTransition="flip" pageTransitionDuration="3000"></Button>
-        <Button text="Navigate in Teams" nsRouterLink="['/', { outlets: { teamTab: ['team/2'], playerTab: ['players'] } }]"></Button>
+        <!-- <Button text="Navigate in Teams" nsRouterLink="['/', { outlets: { teamTab: ['team/2'], playerTab: ['players'] } }]"></Button> -->
     </StackLayout>
 </GridLayout>
