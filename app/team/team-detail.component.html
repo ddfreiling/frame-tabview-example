@@ -1,8 +1,12 @@
 <ActionBar title="Team Details" class="action-bar"></ActionBar>
 <StackLayout flexDirection="column" class="page" class="m-15">
-    <Label class="h2" [text]="item.id"></Label>
-    <Label class="h2" [text]="item.name"></Label>
+    <Label class="h2" [text]="team.id"></Label>
+    <Label class="h2" [text]="team.name"></Label>
 
-    <Button text="next" [nsRouterLink]="['../', item.id + 1]"></Button>
+    <GridLayout rows="auto" columns="* *">
+        <Button col="0" *ngIf="team.id > 1"  text="prev" [nsRouterLink]="['../', team.id - 1]" class="m-10"></Button>
+        <Button col="1" *ngIf="team.id < 6"  text="next" [nsRouterLink]="['../', team.id + 1]" class="m-10"></Button>
+    </GridLayout>
+
     <Button text="teams" [nsRouterLink]="['../../teams']" clearHistory="true"></Button>
 </StackLayout>

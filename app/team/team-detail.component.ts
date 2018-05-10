@@ -10,7 +10,7 @@ import { Subscription } from "rxjs";
     templateUrl: "./team-detail.component.html",
 })
 export class TeamDetailComponent implements OnInit {
-    item: DataItem;
+    team: DataItem;
     subscription: Subscription;    
 
     constructor(
@@ -21,7 +21,7 @@ export class TeamDetailComponent implements OnInit {
     ngOnInit(): void {
         this.subscription = this.route.params.subscribe(params => {
             const id = +params["id"];
-            this.item = this.data.getTeam(id);
+            this.team = this.data.getTeam(id);
         })
     }
 
