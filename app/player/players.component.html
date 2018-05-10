@@ -1,0 +1,14 @@
+<ActionBar title="Player List" class="action-bar"></ActionBar>
+
+<GridLayout class="page" rows="* auto">
+    <ListView [items]="items" class="list-group">
+        <ng-template let-team="item">
+            <Label (tap)="navigateToPlayer(team.id)" [text]="team.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+
+    <StackLayout row="1">
+        <Button text="Navigate in the TeamTab" (tap)="navigateTeam()"></Button>
+    </StackLayout>
+</GridLayout>

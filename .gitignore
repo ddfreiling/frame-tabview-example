@@ -1,0 +1,9 @@
+
+/.history
+/.vscode
+/hooks
+/node_modules
+/platforms
+
+/**/*.js
+/**/*.map
