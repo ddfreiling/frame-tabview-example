@@ -1,14 +1,18 @@
 <ActionBar title="Player List" class="action-bar"></ActionBar>
 
 <GridLayout class="page" rows="* auto">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-team="item">
-            <Label (tap)="navigateToPlayer(team.id)" [text]="team.name"
-                class="list-group-item"></Label>
-        </ng-template>
-    </ListView>
-
-    <StackLayout row="1">
-        <Button text="Navigate in the TeamTab" (tap)="navigateTeam()"></Button>
-    </StackLayout>
+  <ListView [items]="items" class="list-group">
+    <ng-template let-team="item">
+      <Label (tap)="navigateToPlayer(team.id)" [text]="team.name"
+      class="list-group-item"></Label>
+    </ng-template>
+  </ListView>
+  
+  <StackLayout row="1">
+    <Button text="Open Player One with Animation" (tap)="navigatePlayerOne()" class="btn btn-primary"></Button>
+    <Button text="Navigate Using Outlet" (tap)="navigateWithOutlet()" class="btn btn-primary"></Button>
+    <Button text="Navigate Outlet TeamTab: team/1" (tap)="navigateTeamOutlet(1)" class="btn btn-primary"></Button>
+    <Button text="Navigate Url TeamTab: team/2" (tap)="navigateTeamUrl(2)" class="btn btn-primary"></Button>
+    <Button text="Multiple Outlets: player/5, team/5" (tap)="navigateOutlets(5, 5)" class="btn btn-primary"></Button>
+  </StackLayout>
 </GridLayout>

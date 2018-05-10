@@ -1,16 +1,18 @@
 <ActionBar title="Team List" class="action-bar"></ActionBar>
 
 <GridLayout class="page" rows="* auto">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-team="item">
-            <Label [nsRouterLink]="['../team', team.id]" [text]="team.name"
-                class="list-group-item"></Label>
-        </ng-template>
-    </ListView>
-
-    <StackLayout row="1">
-        <Button text="Open Team One" nsRouterLink="../team/1"></Button>
-        <Button text="Open Team Two witn Animation" nsRouterLink="../team/2" pageTransition="flip" pageTransitionDuration="3000"></Button>
-        <Button text="Navigate in Players Tab" [nsRouterLink]="['/', { outlets: { teamTab: ['team/2'], playerTab: ['player/2'] } }]"></Button>
-    </StackLayout>
+  <ListView [items]="items" class="list-group">
+    <ng-template let-team="item">
+      <Label [nsRouterLink]="['../team', team.id]" [text]="team.name"
+      class="list-group-item"></Label>
+    </ng-template>
+  </ListView>
+  
+  <StackLayout row="1">
+    <Button text="Open Team One" nsRouterLink="../team/1" class="btn btn-primary"></Button>
+    <Button text="Open Team Two with Animation" nsRouterLink="../team/2" pageTransition="flip" pageTransitionDuration="3000" class="btn btn-primary"></Button>
+    <Button text="Navigate using Outlet" [nsRouterLink]="['/', { outlets: { teamTab: ['team', 5] } }]" class="btn btn-primary"></Button>
+    <Button text="Navigate in Players Tab" [nsRouterLink]="['/', { outlets: { playerTab: ['player', 5] } }]" class="btn btn-primary"></Button>
+    <Button text="Navigate in Two Outlets" [nsRouterLink]="['/', { outlets: { playerTab: ['player', 6], teamTab: ['team', 6] } }]" class="btn btn-primary"></Button>
+  </StackLayout>
 </GridLayout>

@@ -1,13 +1,12 @@
 <ActionBar title="Player Details" class="action-bar"></ActionBar>
 <StackLayout flexDirection="column" class="page" class="m-15">
-    <Label class="h2" [text]="player.id"></Label>
-    <Label class="h2" [text]="player.name"></Label>
-
-    <GridLayout rows="auto" columns="* *">
-        <Button col="0" *ngIf="player.id > 1" text="prev" (tap)="navigatePrev()" class="m-10"></Button>
-        <Button col="1" *ngIf="player.id < 6" text="next" (tap)="navigateNext()" class="m-10"></Button>
-    </GridLayout>
-    
-    <Button text="Back to Players" (tap)="navigateToPlayers()"></Button>
-
+  <Label class="h2" [text]="player.id"></Label>
+  <Label class="h2" [text]="player.name"></Label>
+  
+  <GridLayout rows="auto" columns="* *">
+    <Button col="0" *ngIf="player.id > 1" text="prev" (tap)="navigatePrev()"  class="btn btn-primary"></Button>
+    <Button col="1" *ngIf="player.id < 6" text="next" (tap)="navigateNext()"  class="btn btn-primary"></Button>
+  </GridLayout>
+  
+  <Button text="Back to Players" (tap)="navigateToPlayers()" class="btn btn-primary"></Button>
 </StackLayout>

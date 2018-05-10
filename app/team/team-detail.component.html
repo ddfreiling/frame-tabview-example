@@ -1,12 +1,12 @@
 <ActionBar title="Team Details" class="action-bar"></ActionBar>
 <StackLayout flexDirection="column" class="page" class="m-15">
-    <Label class="h2" [text]="team.id"></Label>
-    <Label class="h2" [text]="team.name"></Label>
-
-    <GridLayout rows="auto" columns="* *">
-        <Button col="0" *ngIf="team.id > 1"  text="prev" [nsRouterLink]="['../', team.id - 1]" class="m-10"></Button>
-        <Button col="1" *ngIf="team.id < 6"  text="next" [nsRouterLink]="['../', team.id + 1]" class="m-10"></Button>
-    </GridLayout>
-
-    <Button text="teams" [nsRouterLink]="['../../teams']" clearHistory="true"></Button>
+  <Label class="h2" [text]="team.id"></Label>
+  <Label class="h2" [text]="team.name"></Label>
+  
+  <GridLayout rows="auto" columns="* *">
+    <Button col="0" *ngIf="team.id > 1"  text="prev" [nsRouterLink]="['../', team.id - 1]" class="btn btn-primary"></Button>
+    <Button col="1" *ngIf="team.id < 6"  text="next" [nsRouterLink]="['/', { outlets: { teamTab: ['team', team.id + 1] } }]" class="btn btn-primary"></Button>
+  </GridLayout>
+  
+  <Button text="Back to Teams" [nsRouterLink]="['../../teams']" clearHistory="true" class="btn btn-primary"></Button>
 </StackLayout>
