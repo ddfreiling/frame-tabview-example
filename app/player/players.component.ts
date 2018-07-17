@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, DataItem } from '../data.service';
+import { DataService, DataItem } from '~/data.service';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { ActivatedRoute } from '@angular/router';
 

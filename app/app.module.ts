@@ -1,9 +1,9 @@
 import { NgModule, NO_ERRORS_SCHEMA, ErrorHandler } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { AppRoutingModule, COMPONENTS } from './app.routing';
-import { AppComponent } from './app.component';
+import { AppRoutingModule, COMPONENTS } from '~/app.routing';
+import { AppComponent } from '~/app.component';
 
-import { DataService } from './data.service';
+import { DataService } from '~/data.service';
 
 // import { enable as traceEnable, addCategories } from 'tns-core-modules/trace';
 // import { routerTraceCategory } from 'nativescript-angular/trace';

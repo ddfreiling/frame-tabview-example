@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, DataItem } from '../data.service';
+import { DataService, DataItem } from '~/data.service';
 
 @Component({
   selector: 'ns-teams',
