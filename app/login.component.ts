@@ -20,5 +20,7 @@ export class LoginComponent {
 
   public showTabs() {
     console.log('Login::showTabs');
+    this.routerExt.navigate(['/tabs'], { clearHistory: true });
+    //this.routerExt.navigate(['/tabs(playerTab:players//teamTab:teams)']);
   }
 }

@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
   { path: 'tabs', component: TabsComponent, children: [
-    { path: '', redirectTo: '/tabs/(playerTab:/tabs/players//teamTab:/tabs/teams)', pathMatch: 'full' },
+    { path: '', redirectTo: '/tabs/(playerTab:players//teamTab:teams)', pathMatch: 'full' },
 
     { path: 'players', component: PlayerComponent, outlet: 'playerTab'  },
     { path: 'player/:id', component: PlayerDetailComponent, outlet: 'playerTab'  },
